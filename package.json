@@ -1,0 +1,23 @@
+{
+  "name": "jenkinsscripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aksaashoka/JenkinsScripts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aksaashoka/JenkinsScripts/issues"
+  },
+  "homepage": "https://github.com/Aksaashoka/JenkinsScripts#readme",
+  "dependencies": {
+    "pg": "^8.8.0",
+    "postgres": "^3.2.4"
+  }
+}
