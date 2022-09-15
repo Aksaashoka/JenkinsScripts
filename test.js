@@ -6,13 +6,17 @@ const QueryMaster = async () => {
     database: process.env.PG_DB,
     password: process.env.PG_CREDS_PSW,
   };
-  const pool = new Pool(connectionObject);
-  const query = `SELECT * FROM public.user WHERE id='${process.env.user_id}'`;
-  const result = await pool.query(query);
-  result.rows.forEach((element) => {
-    console.table(element);
-  });
-  console.log(JSON.stringify(result.rows));
+  try {
+    const pool = new Pool(connectionObject);
+    const query = `SELECT * FROM public.user WHERE id='${process.env.user_id}'`;
+    const result = await pool.query(query);
+    result.rows.forEach((element) => {
+      console.table(element);
+    });
+    console.log(JSON.stringify(result.rows));
+  } catch (error) {
+    if(error)console.log(error)
+  }
   return result;
 };
 QueryMaster();
