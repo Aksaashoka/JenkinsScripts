@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools{
-    nodejs "NodeP"
+    nodejs "NodeJS"
   }
   parameters {
         string(name: 'user_id', defaultValue: '', description: 'Ingrese el user_id a consultar')
